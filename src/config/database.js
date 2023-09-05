@@ -9,8 +9,8 @@ module.exports = {
   database: process.env.DATA_BASE,
   define: {
     timestamps: true,
-    underscore: true,
-    underscoreAll: true,
+    underscored: true,
+    underscoredAll: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
   },
