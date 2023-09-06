@@ -4,8 +4,9 @@ import loginRequired from '../middlewares/loginRequired';
 
 const router = new Router();
 
-router.get('/', UserController.index);
-router.post('/', UserController.store);
+// Em aplicações reais essas rotas não deveriam existir;
+// router.get('/', UserController.index);
+// router.post('/', UserController.store);
 
 router.get('/', UserController.show);
 router.put('/', loginRequired, UserController.update);
