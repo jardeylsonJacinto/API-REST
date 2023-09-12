@@ -1,11 +1,12 @@
-import express from 'express';
 import dotenv from 'dotenv';
+import express from 'express';
+import { resolve } from 'path';
+import './src/database';
 import homeRouters from './src/routes/homeRoutes';
 import photoRouters from './src/routes/photoRoutes';
 import studentRouters from './src/routes/studentRoutes';
-import userRouters from './src/routes/userRoutes';
 import tokenRouters from './src/routes/tokenRoutes';
-import './src/database';
+import userRouters from './src/routes/userRoutes';
 
 dotenv.config();
 class App {
@@ -18,6 +19,7 @@ class App {
   middlewares() {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
+    this.app.use(express.static(resolve(__dirname));
   }
 
   routes() {
